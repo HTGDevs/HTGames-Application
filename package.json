@@ -1,32 +1,31 @@
 {
-    "name": "htl-preloader",
-    "version": "5.9.7",
-    "description": "HTL Preloader",
-    "main": "main.js",
-    "scripts": {
-      "start": "electron .",
-      "build": "electron-builder",
-      "package": "electron-builder --dir"
+  "name": "htl-preloader",
+  "version": "1.2.5",
+  "description": "HTL Preloader",
+  "main": "main.js", 
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "package": "electron-builder --dir"
+  },
+  "keywords": [],
+  "author": "HTGames",
+  "license": "All rights reserved",
+  "devDependencies": {
+    "electron": "^14.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "productName": "HTProcess",
+  "build": {
+    "appId": "com.htgames.htservice",
+    "directories": {
+      "output": "dist"
     },
-    "keywords": [],
-    "author": "HTGames",
-    "license": "All rights reserved",
-    "devDependencies": {
-      "electron": "^29.0.1",
-      "electron-builder": "^24.12.0"
-    },
-    "productName": "HTProcess",
-    "build": {
-      "appId": "com.htgames.htservice",
-      "directories": {
-        "output": "dist"
-      },
-      "win": {
-        "icon": "icon.ico"
-      }
-    },
-    "dependencies": {
-      "open": "^10.0.3",
-      "is-online": "^10.0.0"
+    "win": {
+      "icon": "icon.ico"
     }
+  },
+  "dependencies": {
+    "electron-titlebar": "^0.0.3"
   }
+}
