@@ -1,38 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTGames Preloader</title>
-    <link rel="icon" type="image/png" href="icon.png"> <!-- Assuming icon.png is in the same directory -->
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTGames</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #00274e, #00aaff);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            user-select: none; /* Disable selection on Safari */
-            -moz-user-select: none; /* Disable selection on Firefox */
-            -webkit-user-drag: none; /* Disable dragging on Chrome and Safari */
-            -webkit-user-select: none; /* Disable selection on Chrome and Safari */
-        }
-    </style>
+    header {
+      background: #004080;
+      padding: 10px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    nav {
+      background: #0056b3;
+      padding: 5px;
+      text-align: center;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 5px 10px;
+      margin: 0 5px;
+      border: 1px solid #fff;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background: #fff;
+      color: #6eb2fc;
+    }
+
+    section {
+      padding: 20px;
+      width: 80%;
+      max-width: 600px;
+      text-align: center;
+      border: 1px solid #00aaff;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #00aaff;
+    }
+
+    h3 {
+      color: #00aaff;
+    }
+
+    a {
+      color: #00aaff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    div {
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
-<body>
-    <img src="loading.png" alt="Loading Image" draggable="false"> <!-- Assuming loading.png is in the same directory -->
-    <script src="particles.js"></script>
-    <script>
-        const { remote } = require('electron');
-
-        // Define custom menu template with empty array
-        const customMenu = [];
-
-        // Set the application menu to null
-        remote.Menu.setApplicationMenu(null);
-    </script>
+<body style="background-color: #28212F;"> <!-- Set background color to #28212F -->
+  <header>HTGames</header>
+  <nav>
+    <a href="#news">News</a>
+    <a href="#apps">Apps</a>
+    <a href="#sites">Sites</a>
+    <a href="#countdown">Countdown</a>
+  </nav>
+  <section id="news">
+    <h2>Latest News</h2>
+    <div>
+      <h3><a href="https://houloude-team.itch.io/bc" target="_blank">Ball Clicker Premium</a></h3>
+      <p>Ball Clicker Premium New Sale, From &euro;2.99 ONLY &euro;0.74</p>
+    </div>
+    <div>
+      <h3><a href="https://itch.io/s/114723/ball-clicker-bundle" target="_blank">Ball Clicker Bundle</a></h3>
+      <p>Get The Ball Clicker Bundle For Only &euro;1.98 (Old Price &euro;7.98)</p>
+    </div>
+    <div>
+      <h3><a href="https://houloude-team.itch.io/htapp" target="_blank">HTGames</a> Application</h3>
+      <p>HTGames Application Is Now Released.</p>
+    </div>
+    <div>
+      <h3><a href="https://houloude-team.itch.io/bc2" target="_blank">Ball Clicker 2</a></h3>
+      <p>Ball Clicker 2 Is Now Available For Only &euro;4.99</p>
+    </div>
+    <div>
+      <h3><a href="https://houloude-team.itch.io/bc2" target="_blank">Ball Clicker 2</a></h3>
+      <p>Ball Clicker 2 Updates Are Paused For 1 Month, New Updates Coming From 15.3.24 On...</p>
+    </div>
+    <div>
+      <h3><a href="https://houloude-team.itch.io/bc2" target="_blank">Ball Clicker 2</a></h3>
+      <p>Ball Clicker 2  Is On Sale Until The End Of 2024, Get It For &euro;1.24</p>
+    </div>
+  </section>
+  <section id="apps">
+    <h2>Featured Apps</h2>
+    <div>
+      <h3><a href="https://houloude-team.itch.io/htapp" target="_blank">HTGames</a></h3>
+      <p>News App.</p>
+    </div>
+    <div>
+      <h3><a href="https://houloude-team.itch.io/bc2" target="_blank">Ball Clicker 2</a></h3>
+      <p>Ball Clicker Game.</p>
+    </div>
+  </section>
+  <section id="sites">
+    <h2>Sites</h2>
+    <div>
+      <h3><a href="https://houloude-team.itch.io" target="_blank">HTGames Site</a></h3>
+      <p>HTGames Site.</p>
+      <h3><a href="https://houdian.data.blog" target="_blank">Houdian Site</a></h3>
+      <p>Houdian Site.</p>
+    </div>
+  </section>
+  <section id="countdown">
+    <h2>Countdown</h2>
+    <h3><a href="https://itch.io/s/114723/ball-clicker-bundle" target="_blank">BCBundle</a></h3>
+    <p>Ball Clicker Bundle Timer:
+    <p id="demo"></p>
+  </section>
 </body>
 </html>
