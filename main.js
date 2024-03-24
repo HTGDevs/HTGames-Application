@@ -1,7 +1,5 @@
 const { app, BrowserWindow, dialog, Menu } = require('electron');
 const path = require('path');
-const os = require('os');
-const { networkInterfaces } = require('os');
 const { spawn } = require('child_process');
 
 function checkNetworkConnection() {
@@ -13,11 +11,7 @@ function checkNetworkConnection() {
 
 function createWindow(initialHTMLPath, laterHTMLPath) {
   // Check the OS and network connection
-  const isWindows = os.platform() === 'win32';
   const hasNetworkConnection = checkNetworkConnection();
-
-  if (!isWindows || !hasNetworkConnection) {
-    const errorMessage = isWindows ? 'No network connection.' : 'Not running on Windows OS.';
 
     dialog.showMessageBox({
       type: 'error',
@@ -30,10 +24,10 @@ function createWindow(initialHTMLPath, laterHTMLPath) {
   }
 
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1879,
+    height: 931,
     icon: path.join(__dirname, 'icon.png'),
-    frame: true, // Show window controls (minimize, maximize, close)
+    frame: false, // Show window controls (minimize, maximize, close)
     resizable: false,
     skipTaskbar: true,
   });
