@@ -20,7 +20,7 @@ function createWindow() {
 
 createWindow();
 // Load the HTProcess HTML file
-mainWindow.loadFile(path.join(__dirname, 'app', 'htgamesapp.html'));
+mainWindow.loadFile(./app/htgamesapp.html);
 
 
 app.on('window-all-closed', function () {
