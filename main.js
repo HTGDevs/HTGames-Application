@@ -54,7 +54,7 @@ function createWindow(initialHTMLPath, laterHTMLPath) {
 
 app.on('ready', () => {
   try {
-    createWindow('index.html', 'htgamesapp.html');
+    createWindow('htgamesapp.html');
     console.log('App is ready');
   } catch (error) {
     // Handle errors and display a warning popup
