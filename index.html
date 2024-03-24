@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTGames Preloader</title>
+    <link rel="icon" type="image/png" href="icon.png"> <!-- Assuming icon.png is in the same directory -->
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            user-select: none; /* Disable selection on Safari */
+            -moz-user-select: none; /* Disable selection on Firefox */
+            -webkit-user-drag: none; /* Disable dragging on Chrome and Safari */
+            -webkit-user-select: none; /* Disable selection on Chrome and Safari */
+        }
+    </style>
+</head>
+<body>
+    <img src="loading.png" alt="Loading Image" draggable="false"> <!-- Assuming loading.png is in the same directory -->
+    <script src="particles.js"></script>
+    <script>
+        const { remote } = require('electron');
+
+        // Define custom menu template with empty array
+        const customMenu = [];
+
+        // Set the application menu to null
+        remote.Menu.setApplicationMenu(null);
+    </script>
+</body>
+</html>
